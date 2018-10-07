@@ -14,7 +14,7 @@ class App extends Component {
             <Col md={2} xs={2} style={{ writingMode: "vertical-lr", textOrientation: "upright" }}>
               <img style={{width:"100%"}} src="http://sunprairieumc.org/wp-content/uploads/2016/03/garage-sale.jpg"></img>
           </Col>
-            <Col `md={1`0} xs={10} style={{padding:"3rem"}}>
+            <Col md={10} xs={10} style={{padding:"3rem"}}>
               <a style={{}} href="/aboutUs" style={{fontSize:"4rem"}}>About us</a>
             </Col>
           </Row>
