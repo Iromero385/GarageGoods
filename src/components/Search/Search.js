@@ -1,5 +1,6 @@
 import {Row, Col} from "react-bootstrap"
 import Form from "./../Form"
+import logo from  "./../../images/GarageGoods.gif"
 import React from "react"; 
 
 const Search = () => (
@@ -11,7 +12,7 @@ const Search = () => (
                 <Form style={{border:"solid"}} />
             </Col>
             <Col md={2} style={{ writingMode: "vertical-lr", textOrientation: "upright"}}>
-            <img alt="none" style={{width:"100%"}} src="http://sunprairieumc.org/wp-content/uploads/2016/03/garage-sale.jpg"></img>
+            <img alt="none" style={{width:"100%"}} src={logo}></img>
             </Col>
         </Row>
 );
