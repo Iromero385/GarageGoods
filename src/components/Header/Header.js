@@ -8,22 +8,22 @@ const Header = () => (
     <Navbar style={{backgroundColor:"lightgreen"}}>
   <Navbar.Header>
     <Navbar.Brand>
-      <a href="#home">Garage Goods</a>
+      <a style={{color:"black"}} href="#home">Garage Goods</a>
     </Navbar.Brand>
   </Navbar.Header>
   <Nav pullRight>
-    <NavItem eventKey={1} href="#">
-      Link
+    <NavItem eventKey={1} href="#" >
+      <p style={{color:"black"}} >Home </p>
     </NavItem>
     <NavItem eventKey={2} href="#">
-      Link
+      <p style={{color:"black"}} >Members </p>
     </NavItem>
-    <NavDropdown eventKey={3} title="Dropdown" id="basic-nav-dropdown">
-      <MenuItem eventKey={3.1}>Action</MenuItem>
-      <MenuItem eventKey={3.2}>Another action</MenuItem>
+    <NavDropdown  eventKey={3}  title="My Account" id="basic-nav-dropdown">
+      <MenuItem eventKey={3.1}>My Posts</MenuItem>
+      <MenuItem eventKey={3.2}>Create Posts</MenuItem>
       <MenuItem eventKey={3.3}>Something else here</MenuItem>
       <MenuItem divider />
-      <MenuItem eventKey={3.4}>Separated link</MenuItem>
+      <MenuItem eventKey={3.4}>Logout</MenuItem>
     </NavDropdown>
   </Nav>
 </Navbar>
