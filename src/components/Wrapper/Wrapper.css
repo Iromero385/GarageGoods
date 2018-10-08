@@ -1,4 +1,13 @@
 #wrapper{
     padding-bottom: 10rem;
     margin-top: 10rem;
+    background-color: rgba(0, 0, 0, 0.062);
+    height: 900;
+   
+}
+#aboutUsBackground{
+    background-color: rgba(119, 136, 153, 0.479);
+    height: 900;
+    padding-top: 8rem
+    
 }
