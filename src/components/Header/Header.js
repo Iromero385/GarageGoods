@@ -5,7 +5,7 @@ import React from "react";
 
 const Header = () => (
   <div>
-    <Navbar style={{backgroundColor:"#722",color: "white"}}>
+    <Navbar style={{backgroundColor:"#722"}}>
   <Navbar.Header>
     <Navbar.Brand>
       <a style={{color:"white"}} href="#home">Garage Goods</a>
