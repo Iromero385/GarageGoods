@@ -5,6 +5,9 @@ import Header from "./components/Header"
 import Search from "./components/Search"
 import Wrapper from "./components/Wrapper"
 import backImge from "./images/backgroudmain2.jpg"
+import Results from "./components/Results"
+import TableRow from "./components/TableRow"
+import Login from "./components/Login"
 import './App.css';
 
 
@@ -16,7 +19,18 @@ class App extends Component {
       <div className="App">
         <Header />
         <Wrapper>
-            <AboutUs></AboutUs>      
+        <Login></Login>
+            <AboutUs></AboutUs>
+            <Search/>  
+            <Results>
+              <TableRow></TableRow>
+              <TableRow></TableRow>
+              <TableRow></TableRow>
+              <TableRow></TableRow>
+              <TableRow></TableRow>
+              <TableRow></TableRow>
+              <TableRow></TableRow>
+            </Results>
         </Wrapper>
         
       </div>
