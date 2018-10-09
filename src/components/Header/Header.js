@@ -1,5 +1,4 @@
 import { Navbar, Nav, NavItem, NavDropdown, MenuItem } from 'react-bootstrap';
-
 import React from "react";
 import "./Header.css"
 
@@ -19,11 +18,11 @@ const Header = () => (
       <p>Members </p>
     </NavItem>
     <NavDropdown  eventKey={3}  title="My Account" id="basic-nav-dropdown">
-      <MenuItem eventKey={3.1}>My Posts</MenuItem>
-      <MenuItem eventKey={3.2}>Create Posts</MenuItem>
-      <MenuItem eventKey={3.3}>Something else here</MenuItem>
+      <MenuItem eventKey={3.1}> <p style={{color:"black"}}>My Post</p></MenuItem>
+      <MenuItem eventKey={3.2}><p style={{color:"black"}}>Create Post</p></MenuItem>
+      <MenuItem eventKey={3.3}><p style={{color:"black"}}>Something Here</p></MenuItem>
       <MenuItem divider />
-      <MenuItem eventKey={3.4}>Logout</MenuItem>
+      <MenuItem eventKey={3.4}><p style={{color:"black"}}>Logout</p></MenuItem>
     </NavDropdown>
   </Nav>
 </Navbar>

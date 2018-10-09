@@ -1,7 +1,10 @@
 
 #aboutUsBackground{
-    height: 30rem;
+    height: 100rem;
     text-align: center; 
+    background-repeat: no-repeat;
+    background-size: 100%;
+    
 }
 
 #aboutUsLettering{

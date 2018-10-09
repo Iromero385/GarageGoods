@@ -4,7 +4,9 @@ import logo from  "./../../images/GarageGoods.gif"
 // import backgroundPic from "/backgroundmain2.jpg"
 import "./Wrapper.css"
 
-
+// const backgroundImg = {
+//     backgroundImage: "url('/backgroudmain2.jpg')"
+// }
 const Wrapper = (props) => (
     <Grid fluid id= "wrapper">
      <Row>

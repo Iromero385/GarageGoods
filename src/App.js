@@ -4,7 +4,7 @@ import { Grid } from "react-bootstrap"
 import Header from "./components/Header"
 import Search from "./components/Search"
 import Wrapper from "./components/Wrapper"
-// import backImg from "./images/backgroudmain2.jpg"
+import backImge from "./images/backgroudmain2.jpg"
 import './App.css';
 
 

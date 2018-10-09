@@ -1,9 +1,9 @@
 import {Row, Col} from "react-bootstrap"
 import "./AboutUs.css"
 import React from "react"
-
+import backgroundImage from './backgroudmain2.jpg'
 const backgroundImg = {
-  backgroundImage: "url('/backgroudmain2.jpg')"
+  backgroundImage: `url(${backgroundImage})`
 }
 
 const AboutUs = () => (
