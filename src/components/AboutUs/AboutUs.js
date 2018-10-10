@@ -9,7 +9,9 @@ const backgroundImg = {
 const AboutUs = () => (
     <Row >
     
-    <Col md={12} xs={10} id="aboutUsBackground" style={backgroundImg}>
+    <Col md={12} xs={10} id="aboutUsBackground" >
+    <br/>
+    
       <a href="/aboutUs" id="aboutUsLettering">About us</a>
     </Col>
   </Row>

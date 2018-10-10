@@ -1,17 +1,19 @@
 
 #aboutUsBackground{
-    height: 100rem;
+    min-height: 100rem;
     text-align: center; 
     background-repeat: no-repeat;
-    background-size: 100%;
-    opacity: .5;
-    z-index: 0;
+    background-size: 70%;
+    background-attachment: fixed;
+    background-position-x: 55rem;
+    background-position-y: 18rem;
+    scroll-snap-destination: 200px 75%;
     
 }
 
 #aboutUsLettering{
     font-size:4rem;
     color: black;
-   z-index: 5;
+   
 }
 
