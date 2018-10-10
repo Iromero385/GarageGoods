@@ -1,9 +1,9 @@
 import React from "react";
-import { Table } from "react-bootstrap";
+import { Table, Grid, Col, Row } from "react-bootstrap";
 import "./Results.css"
 
 const Results = (props) => (
-    <Table striped bordered condensed hover >
+    <Table style={{backgroundColor:"lightgrey"}}  >
       <thead>
         <tr>
           <th>#</th>
@@ -17,6 +17,7 @@ const Results = (props) => (
         <tbody>
             {props.children}
         </tbody>
+        <div style={{backgroundColor:"lightgray", width:"100%",height:100, marginLeft:0,marginRight:0, marginTop:"50rem" }}></div>
     </Table>
 );
     
