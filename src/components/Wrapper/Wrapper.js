@@ -17,8 +17,10 @@ const backgroundImg2 = {
 const Wrapper = (props) => (
     <Grid fluid id= "wrapper">
      <Row>
-        <Col md={4} >
+        <Col md={4}>
             <div id="logoId" style={backgroundImg}></div>
+            <div id="logoId" style={backgroundImg}></div>
+        
             {/* <img alt="none" style={{width:"100%", paddingTop:"3rem"}} src={logo} ></img> */}
         </Col>
         <Col md={8} id="backgroundImage" style={backgroundImg2}>
