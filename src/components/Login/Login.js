@@ -1,6 +1,7 @@
 import React from "react"
-import {Modal, Popover, Tooltip, Button, OverlayTrigger} from "react-bootstrap"
-import Form from "./../Form"
+import {Modal, Button} from "react-bootstrap"
+import LoginForm from "./../LoginForm"
+
 import "./Login.css"
 
 class Login extends React.Component{
@@ -29,21 +30,22 @@ class Login extends React.Component{
         <Button bsStyle="primary" bsSize="large" onClick={this.handleShow}>
           Launch demo modal
         </Button>
-        <Modal id="modal" bsSize="large" show={this.state.show} onHide={this.handleClose}>
-          <Modal.Header closeButton>
-            <Modal.Title>Modal heading</Modal.Title>
+        <Modal  id="modal" bsSize="large" show={this.state.show} onHide={this.handleClose}>
+          <Modal.Header closeButton style={{backgroundColor:"sandybrown", borderRadius:"1rem"}}>
+            <Modal.Title style={{color:"white", fontSize:"3rem"}}>Login</Modal.Title>
           </Modal.Header>
-          <Modal.Body>
-              <Form></Form>
+          <Modal.Body className="loginBody" >
+              <LoginForm></LoginForm>
             {/* content goes here */}
           </Modal.Body>
           <Modal.Footer>
-              <Button onClick={this.handleShow2}>Second Modal</Button>
             <Button onClick={this.handleClose}>Close</Button>
+              <Button onClick={this.handleShow2}>Second Modal</Button>
           </Modal.Footer>
         </Modal>
-// second modal
-        <Modal show={this.state.show2} onHide={this.handleClose2}>
+          {/* second Modal */}
+
+        <Modal bsSize="large" show={this.state.show2} onHide={this.handleClose2}>
           <Modal.Header closeButton>
             <Modal.Title>Modal 2</Modal.Title>
           </Modal.Header>

@@ -1,0 +1,10 @@
+.loginBody{
+    background-image: url(./backgroundmain4.jpg);
+    background-size: 100%;
+    background-repeat: no-repeat;
+    height: 50rem;
+}
+.modal-content{
+    border-radius: 3rem;
+    background-color: sandybrown;
+}
