@@ -4,11 +4,14 @@
     text-align: center; 
     background-repeat: no-repeat;
     background-size: 100%;
+    opacity: .5;
+    z-index: 0;
     
 }
 
 #aboutUsLettering{
     font-size:4rem;
     color: black;
+   z-index: 5;
 }
 
