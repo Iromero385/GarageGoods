@@ -1,6 +1,7 @@
 import React from "react"
 import {Modal, Popover, Tooltip, Button, OverlayTrigger} from "react-bootstrap"
 import Form from "./../Form"
+import "./Login.css"
 
 class Login extends React.Component{
     state = {
@@ -11,9 +12,10 @@ class Login extends React.Component{
         this.setState({show:false});
     }
     handleClose2 = () => {
+        console.log(this.state.show2)
         this.setState({show2:false});
     }
-    handleShow= () => {
+    handleShow2= () => {
         this.setState({show2:true})
     }
     handleShow= () => {
@@ -27,7 +29,7 @@ class Login extends React.Component{
         <Button bsStyle="primary" bsSize="large" onClick={this.handleShow}>
           Launch demo modal
         </Button>
-        <Modal show={this.state.show} onHide={this.handleClose}>
+        <Modal id="modal" bsSize="large" show={this.state.show} onHide={this.handleClose}>
           <Modal.Header closeButton>
             <Modal.Title>Modal heading</Modal.Title>
           </Modal.Header>
@@ -36,11 +38,11 @@ class Login extends React.Component{
             {/* content goes here */}
           </Modal.Body>
           <Modal.Footer>
-              <Button onClick={this.handleShow2}></Button>
+              <Button onClick={this.handleShow2}>Second Modal</Button>
             <Button onClick={this.handleClose}>Close</Button>
           </Modal.Footer>
         </Modal>
-
+// second modal
         <Modal show={this.state.show2} onHide={this.handleClose2}>
           <Modal.Header closeButton>
             <Modal.Title>Modal 2</Modal.Title>
@@ -50,7 +52,7 @@ class Login extends React.Component{
           </Modal.Body>
           <Modal.Footer>
             
-            <Button onClick={this.handleClose}>Close</Button>
+            <Button onClick={this.handleClose2}>Close</Button>
           </Modal.Footer>
         </Modal>
 
