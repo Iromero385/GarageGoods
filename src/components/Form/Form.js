@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import "./Form.css";
+import { white } from "ansi-colors";
 
 class Form extends Component {
   // Setting the component's initial state
@@ -36,7 +37,7 @@ class Form extends Component {
     return (
       <div>
         <form className="form" style={{marginTop:0}}>
-          <label style={{paddingTop:10}}> Categories </label>
+          <label style={{paddingTop:10, color: "#ffffff"  , fontSize: 25}}> Categories </label>
           <input
             value={this.state.topic}
             name="Categories"
@@ -44,7 +45,7 @@ class Form extends Component {
             type="text"
             placeholder="What topic would you like to search?"
           />
-          <label >Location</label>
+          <label style={{paddingTop:10, color: "#ffffff", fontSize: 25}}>Location</label>
           <input
             value={this.state.startDate}
             name="location"
@@ -52,7 +53,7 @@ class Form extends Component {
             type="text"
             placeholder="Zipcode"
           />
-          <label >Dates</label>
+          <label style={{paddingTop:10, color: "#ffffff", fontSize: 25}}>Dates</label>
           <input
             value={this.state.endDate}
             name="date"

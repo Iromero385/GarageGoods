@@ -1,19 +1,15 @@
 
-#aboutUsBackground{
-    min-height: 100rem;
+.aboutUsBackground{
+    min-height: 50rem;
     text-align: center; 
     /* background-repeat: no-repeat;
     background-size: 70%;
     background-attachment: fixed;
     background-position-x: 55rem;
     background-position-y: 18rem; */
-  
-    
-}
-
-#aboutUsLettering{
-    font-size:4rem;
-    color: black;
    
 }
-
+#aboutUsLettering{
+    font-size:4rem;
+    color: white;
+}
