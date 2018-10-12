@@ -1,10 +1,7 @@
 import { Row, Col, Collapse, Well } from "react-bootstrap"
 import "./AboutUs.css"
 import React from "react"
-import backgroundImage from './backgroudmain2.jpg'
-const backgroundImg = {
-  backgroundImage: `url(${backgroundImage})`
-}
+
 
 class AboutUs extends React.Component {
   state = {

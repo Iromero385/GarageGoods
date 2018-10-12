@@ -1,12 +1,13 @@
 import React from "react"
 import {Modal, Button} from "react-bootstrap"
 import LoginForm from "./../LoginForm"
+import AboutUs from "./../AboutUs"
 
 import "./Login.css"
 
 class Login extends React.Component{
     state = {
-        show: false,
+        show: true,
         show2: false
     }
     handleClose = () => {
@@ -25,11 +26,11 @@ class Login extends React.Component{
     render(){
         return(
             <div>
-        <p>Click to get the full Modal experience!</p>
-
-        <Button bsStyle="primary" bsSize="large" onClick={this.handleShow}>
+       
+          <AboutUs/>
+        {/* <Button bsStyle="primary" bsSize="large" onClick={this.handleShow}>
           Launch demo modal
-        </Button>
+        </Button> */}
         <Modal  id="modal" bsSize="large" show={this.state.show} onHide={this.handleClose}>
           <Modal.Header closeButton style={{backgroundColor:"sandybrown", borderRadius:"1rem"}}>
             <Modal.Title style={{color:"white", fontSize:"3rem"}}>Login</Modal.Title>
