@@ -1,15 +1,10 @@
 const express = require("express");
 const bodyParser = require("body-parser");
-// const routes = require("./routes");
-var db = require("./models");
-var session = require("express-session");
-const passport = require("./config/passport");
+const db = require("./models");
 const app = express();
 const PORT = process.env.PORT || 3001;
 const routes = require("./routes");
-// app.use(session({ secret: "keyboard cat", resave: true, saveUninitialized: true }));
-// app.use(passport.initialize());
-// app.use(passport.session());
+
 
 // Define middleware here
 app.use(bodyParser.urlencoded({ extended: true }));
