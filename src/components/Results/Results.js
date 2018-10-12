@@ -3,6 +3,7 @@ import { Table, Grid, Col, Row } from "react-bootstrap";
 import "./Results.css"
 
 const Results = (props) => (
+    <Col md={12}>
     <Table style={{backgroundColor:"lightgrey"}}  >
       <thead>
         <tr>
@@ -17,8 +18,9 @@ const Results = (props) => (
         <tbody>
             {props.children}
         </tbody>
-        <div style={{backgroundColor:"lightgray", width:"100%",height:100, marginLeft:0,marginRight:0, marginTop:"50rem" }}></div>
     </Table>
+        <div style={{backgroundColor:"lightgray", width:"100%",height:100, marginLeft:0,marginRight:0, marginTop:"50rem" }}></div>
+    </Col>
 );
     
 export default Results; 

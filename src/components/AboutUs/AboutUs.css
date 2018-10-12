@@ -11,9 +11,13 @@
     
 }
 
-#aboutUsLettering{
+.aboutUsLettering{
     font-size:4rem;
     color: white;
 
 }
+.aboutUsLettering:hover{
+    text-decoration: underline;
+}
+
 
