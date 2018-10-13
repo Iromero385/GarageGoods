@@ -2,7 +2,7 @@ import React from "react"
 import {Modal, Button} from "react-bootstrap"
 import LoginForm from "./../LoginForm"
 import AboutUs from "./../AboutUs"
-
+import API from "../../utils/API"
 import "./Login.css"
 
 class Login extends React.Component{
@@ -10,6 +10,9 @@ class Login extends React.Component{
         show: true,
         show2: false
     }
+    componentDidMount(){
+      API.islogin().then(res => console.log(res.data))
+    }    
     handleClose = () => {
         this.setState({show:false});
     }

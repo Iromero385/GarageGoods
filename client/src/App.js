@@ -1,4 +1,4 @@
-import React, { Component} from 'react';
+import React from 'react';
 import {BrowserRouter as Router, Route, Switch} from "react-router-dom";
 import AboutUs from "./components/AboutUs";
 import Header from "./components/Header";
@@ -16,7 +16,8 @@ const App = () => (
           <Header />
           <Wrapper>
               <Switch>
-                <Route exact path="/" component={Login} />
+                <Route exact path="/" component={AboutUs} />
+                <Route exact path="/login" component={Login} />
                 <Route exact path="/Search" component={Search} />
                 <Route path="/Results" component={Results} />
               </Switch>

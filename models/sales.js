@@ -13,13 +13,13 @@ module.exports = function(sequelize, DataTypes) {
     zipcode:DataTypes.STRING,
   });
  
-  // Sales.associate = function(models) {
-  //   Sales.belongsTo(models.User, {
-  //     foreignKey: {
-  //       allowNull: false,
-  //     }
-  //   });
-  // }
+  Sales.associate = function(models) {
+    Sales.belongsTo(models.User, {
+      foreignKey: {
+        allowNull: false,
+      }
+    });
+  }
 
   return Sales;
 };
