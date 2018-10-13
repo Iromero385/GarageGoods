@@ -9,12 +9,12 @@ const Header = () => (
     <Navbar id="navbar" fixedTop fluid>
       <Navbar.Header >
         <Navbar.Brand>
-          <a href="#home">Garage Goods</a>
+          <Link to="/home" >Garage Goods</Link>
         </Navbar.Brand>
       </Navbar.Header>
       <Nav pullRight>
         <NavItem eventKey={1} href="#" >
-          <Link to="/">Home</Link>
+          <Link to="/home">Home</Link>
         </NavItem>
         <NavItem eventKey={2} href="#">
           <Link to="/Search">Members</Link>

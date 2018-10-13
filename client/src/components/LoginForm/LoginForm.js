@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import { Grid, Row, Col } from "react-bootstrap"
+import API from "../../utils/API"
 import "./LoginForm.css";
 const style = {
   paddingTop: 10,fontSize:"3rem",color:"white" 
@@ -9,8 +10,7 @@ class LoginForm extends Component {
   // Setting the component's initial state
   state = {
     Email: "",
-    Password: "",
-    NickName: ""
+    Password: ""
   };
 
   handleInputChange = event => {
@@ -26,13 +26,17 @@ class LoginForm extends Component {
   };
 
   handleFormSubmit = event => {
-
-
-    this.setState({
-      Email: "",
-      Password: "",
-      NickName: ""
-    });
+    event.preventDefault();
+    API.login({
+      email: this.state.Email,
+      password:this.state.Password
+    }).then(res => {
+          this.setState({
+            Email: "",
+            Password: ""
+          });
+    
+    }).catch(err => console.log(err))
   };
 
   render() {
@@ -48,7 +52,7 @@ class LoginForm extends Component {
                 name="Email"
                 onChange={this.handleInputChange}
                 type="text"
-                placeholder="SalingEveryting@GarageGoods.com?"
+                placeholder="David@GarageGoods.com?"
               />
               <label style={style}>Password</label>
               <input
@@ -58,7 +62,7 @@ class LoginForm extends Component {
                 type="Password"
                 placeholder="Secret"
               />
-              <label style={style} >NickName</label>
+              {/* <label style={style} >NickName</label>
               <input
                 value={this.state.endDate}
                 name="NickName"
@@ -66,7 +70,7 @@ class LoginForm extends Component {
                 type="text"
                 placeholder="What should we call you?"
 
-              />
+              /> */}
               <button 
               style={{backgroundColor:"sandybrown",fontSize:"3rem", color:"white", width:"100%",marginTop:"2rem"}} 
               onClick={this.handleFormSubmit}>

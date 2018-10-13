@@ -1,5 +1,5 @@
 import React from "react";
-import { Table, Grid, Col, Row } from "react-bootstrap";
+import { Table, Col } from "react-bootstrap";
 import "./Results.css"
 
 const Results = (props) => (
