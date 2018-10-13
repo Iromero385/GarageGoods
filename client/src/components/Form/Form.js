@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import "./Form.css";
-import { white } from "ansi-colors";
+
 
 class Form extends Component {
   // Setting the component's initial state
