@@ -26,7 +26,7 @@ render(){
         <NavItem eventKey={1} href="/" >
           Home
         </NavItem>
-        <NavItem eventKey={2} href="/Search">
+        <NavItem eventKey={2} href="/Members">
           Members
         </NavItem>
         <NavDropdown eventKey={3} title="My Account" id="basic-nav-dropdown">

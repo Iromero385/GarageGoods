@@ -55,7 +55,6 @@ class LoginForm extends Component {
             Password: ""
           })
           this.props.closeModal();
-          window.location.assign(res.data)
         })
         .catch(err => console.log(err))
     }

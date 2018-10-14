@@ -6,6 +6,7 @@ import Search from "./components/Search";
 import Wrapper from "./components/Wrapper";
 import Results from "./components/Results";
 import Login from "./components/Login";
+import Logout from "./components/Logout";
 import './App.css';
 
 
@@ -17,10 +18,9 @@ const App = () => (
           <Header />
           <Wrapper>
               <Switch>
-                <Route exact path="/" component={AboutUs} />
-                <Route exact path="/logout" component={Login} />
-                <Route exact path="/login" component={Login} />
-                <Route exact path="/Search" component={Results} />
+                <Route exact path="/" component={Login} />
+                <Route exact path="/logout" component={Logout} />
+                <Route exact path="/Members" component={Results} />
                 <Route path="/Results" component={Results} />
               </Switch>
 

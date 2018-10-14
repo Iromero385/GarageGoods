@@ -3,7 +3,7 @@
 USE exampledb;
 
 
-Insert into users (email,password,createdAt,updatedAt,quote) VALUES
+Insert into users (email,password,createdAt,updatedAt) VALUES
 ("Amica@berkeley.edu","$2a$10$J84GphQYgdvQ3lJEZaPPXenbvr9z./9GSxA4EAfCs4z5szgqTpit.","2018-09-15 23:30:23","2018-09-15 23:30:23"),
 ("David@berkeley.edu","$2a$10$37OHeWr3onhHOkn9vTPJBewDR22ZGX9ESCYWQckKjgQMMGp90PZim","2018-09-15 23:30:23","2018-09-15 23:30:23"),
 ("Sim@berkeley.edu","$2a$10$9PZ1B1Jg.rBsaQa2Wrsf.untcbH3jBxWUl73QaukvYga4db5dSb0a","2018-09-15 23:30:23","2018-09-15 23:30:23"),
@@ -15,10 +15,6 @@ VALUES ("12 Marr Ave"," Oakland","CA","94611","Fri 10/12", "2018-09-15 23:30:23"
 ("1621 Sacramento St"," Berkeley","CA","94702","Fri 10/12", "2018-09-15 23:30:23","2018-09-15 23:30:23",2),
 ("7010 Manila Ave"," El Cerrito","CA","94530","Sat 10/13", "2018-09-15 23:30:23","2018-09-15 23:30:23",3),
 ("1581 Boulevard Way"," Walnut Creek","CA","94595","Tue 10/16", "2018-09-15 23:30:23","2018-09-15 23:30:23",4),
-("1855 Gateway Blvd", "Concord","CA","94520","Fri 10/19", "2018-09-15 23:30:23","2018-09-15 23:30:23",5),
-("2086 Essenay Ave", "Walnut Creek","CA","94597","Fri 10/19", "2018-09-15 23:30:23","2018-09-15 23:30:23",6),
-("249 Sagamore St", "San Francisco","CA","94112","Fri 10/19", "2018-09-15 23:30:23","2018-09-15 23:30:23",7),
-("2080 East St", "Concord","CA","94520","Fri 10/26", "2018-09-15 23:30:23","2018-09-15 23:30:23",8),
-("12 Marr Ave"," Oakland","CA","94611","Fri 10/26", "2018-09-15 23:30:23","2018-09-15 23:30:23", 9),
-("7010 Manila Ave"," El Cerrito","CA","94530","Sat 10/26", "2018-09-15 23:30:23","2018-09-15 23:30:23",10);
+("1855 Gateway Blvd", "Concord","CA","94520","Fri 10/19", "2018-09-15 23:30:23","2018-09-15 23:30:23",5);
+
 

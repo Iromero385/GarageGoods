@@ -9,5 +9,11 @@ export default {
     },
     logout:function (){
         return axios.get("/logout")
+    },
+    findAll:function(){
+        return axios.get("/api/GarageGoods/AllListings")
+    },
+    currentUser:function(){
+        return axios.get("/api/user_data")
     }
 };
