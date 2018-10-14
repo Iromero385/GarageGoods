@@ -9,8 +9,10 @@ module.exports = function(sequelize, DataTypes) {
     state: {
       type: DataTypes.STRING
     },
+    city:DataTypes.STRING,
     date:DataTypes.STRING,
-    zipcode:DataTypes.STRING,
+    zipcode:DataTypes.STRING
+    
   });
  
   Sales.associate = function(models) {
