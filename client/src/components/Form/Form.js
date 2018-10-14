@@ -39,7 +39,7 @@ class Form extends Component {
         <form className="form" style={{marginTop:0}}>
           <label style={{paddingTop:10, color: "#ffffff"  , fontSize: 25}}> Categories </label>
           <input
-            value={this.state.topic}
+            value={this.state.categories}
             name="Categories"
             onChange={this.handleInputChange}
             type="text"
@@ -47,7 +47,7 @@ class Form extends Component {
           />
           <label style={{paddingTop:10, color: "#ffffff", fontSize: 25}}>Location</label>
           <input
-            value={this.state.startDate}
+            value={this.state.location}
             name="location"
             onChange={this.handleInputChange}
             type="text"
@@ -55,7 +55,7 @@ class Form extends Component {
           />
           <label style={{paddingTop:10, color: "#ffffff", fontSize: 25}}>Dates</label>
           <input
-            value={this.state.endDate}
+            value={this.state.date}
             name="date"
             onChange={this.handleInputChange}
             type="text"

@@ -7,7 +7,7 @@
 }
 #aboutUsBackground{
     background-color: rgba(119, 136, 153, 0.479);
-    height: 900;
+    height: 1200;
     padding-top: 8rem;
     
   
@@ -17,10 +17,10 @@
     background-attachment: fixed;
     background-size:35%; 
     background-repeat:no-repeat;
-    background-position-y: 10rem;
+    background-position-y: 5rem;
 }
 #backgroundImage{
     background-attachment: fixed;
-    background-position-x:-5rem;
+   
 
 }

@@ -11,7 +11,7 @@ const passport = require("../config/passport");
     // Since we're doing a POST with javascript, we can't actually redirect that post into a GET request
     // So we're sending the user back the route to the members page because the redirect will hrouteren on the front end
     // They won't get this or even be able to access this page if they aren't authed
-    res.json("/members");
+    res.send('/');
   });
 
 
@@ -24,7 +24,7 @@ const passport = require("../config/passport");
       email: req.body.email,
       password: req.body.password
     }).then(function() {
-      res.redirect(307, "/api/login");
+      res.send("/");
     }).catch(function(err) {
       console.log(err);
       res.json(err);
@@ -35,7 +35,7 @@ const passport = require("../config/passport");
   // Route for logging user out
   router.get("/logout", function(req, res) {
     req.logout();
-    res.redirect("/");
+    res.send("/logout");
   });
 
   // Route for getting some data about our user to be used client side
@@ -50,7 +50,6 @@ const passport = require("../config/passport");
       res.json({
         email: req.user.email,
         id: req.user.id,
-        interests: ["movies", "sports", "fishing"]
       });
     }
   });

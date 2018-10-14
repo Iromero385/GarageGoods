@@ -11,16 +11,19 @@ import './App.css';
 
 
 const App = () => (
+
       <Router>
         <div className="App">
           <Header />
           <Wrapper>
               <Switch>
                 <Route exact path="/" component={AboutUs} />
+                <Route exact path="/logout" component={Login} />
                 <Route exact path="/login" component={Login} />
-                <Route exact path="/Search" component={Search} />
+                <Route exact path="/Search" component={Results} />
                 <Route path="/Results" component={Results} />
               </Switch>
+
           </Wrapper >
         </div >
       </Router>
