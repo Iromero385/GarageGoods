@@ -27,17 +27,47 @@ class LoginForm extends Component {
 
   handleFormSubmit = event => {
     event.preventDefault();
-    API.login({
-      email: this.state.Email,
-      password:this.state.Password
-    }).then(res => {
+    if (this.props.SecondModal === true){
+      API.singup({
+        email: this.state.Email,
+        password:this.state.Password
+      }).then(res => {
+        console.log(res.data.signup)
+        
           this.setState({
             Email: "",
             Password: ""
           });
-    
-    }).catch(err => console.log(err))
+          this.props.closeModal();
+          this.props.closeModal2();
+          window.location.assign(res.data)
+        
+      
+      }).catch(err => console.log(err))
+    }
+    else{
+      API.login({
+        email: this.state.Email,
+        password:this.state.Password
+      }).then(res => {
+          this.setState({
+            Email: "",
+            Password: ""
+          })
+          this.props.closeModal();
+          window.location.assign(res.data)
+        })
+        .catch(err => console.log(err))
+    }
   };
+  change = () => {
+    if(this.props.SecondModal===true){
+      return "Signup"
+    }
+    else{
+      return "Login"
+    }
+  }
 
   render() {
     // Notice how each input has a `value`, `name`, and `onChange` prop
@@ -48,7 +78,7 @@ class LoginForm extends Component {
             <form className="form" style={{ marginTop: 0 }}>
               <label style={style}> Email </label>
               <input
-                value={this.state.topic}
+                value={this.state.Email}
                 name="Email"
                 onChange={this.handleInputChange}
                 type="text"
@@ -56,7 +86,7 @@ class LoginForm extends Component {
               />
               <label style={style}>Password</label>
               <input
-                value={this.state.startDate}
+                value={this.state.Password}
                 name="Password"
                 onChange={this.handleInputChange}
                 type="Password"
@@ -74,7 +104,7 @@ class LoginForm extends Component {
               <button 
               style={{backgroundColor:"sandybrown",fontSize:"3rem", color:"white", width:"100%",marginTop:"2rem"}} 
               onClick={this.handleFormSubmit}>
-              login
+                {this.change()}
               </button>
             </form>
           </Col>

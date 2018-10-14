@@ -4,7 +4,10 @@ export default {
     login:function (Data){
         return axios.post("/api/login",Data);
     },
-    islogin:function(){
-        return axios.get("/")
+    singup:function(Data){
+        return axios.post("/api/signup",Data)
+    },
+    logout:function (){
+        return axios.get("/logout")
     }
 };
