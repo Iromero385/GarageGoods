@@ -40,7 +40,7 @@ class LoginForm extends Component {
           });
           this.props.closeModal();
           this.props.closeModal2();
-          window.location.assign(res.data)
+          
         
       
       }).catch(err => console.log(err))
@@ -54,6 +54,7 @@ class LoginForm extends Component {
             Email: "",
             Password: ""
           })
+          this.props.userData();
           this.props.closeModal();
         })
         .catch(err => console.log(err))

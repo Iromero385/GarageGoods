@@ -9,7 +9,13 @@ class Header extends React.Component {
   state={
     email:""
   }
- 
+  componentDidMount(){
+   this.setState({email:this.props.userEmail})
+  }
+logoutPlease = () => {
+  API.logout().then(res => window.location.assign("/Logout")).catch(err => console.log(err))
+}
+
 userdata = () => {
     API.currentUser().then((res) => {
       console.log(res.data)

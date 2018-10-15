@@ -2,6 +2,8 @@ import React from "react";
 import { Table, Col } from "react-bootstrap";
 import TableRow from "./../TableRow"
 import API from "./../../utils/API"
+import { Link, Route } from "react-router-dom";
+import Search from "./../Search"
 import "./Results.css"
 
 
@@ -50,6 +52,14 @@ render() {
                     }
             </tbody>
         </Table>
+        <Link to={`${this.props.match.url}/Search`} style={{fontSize:"3rem",float:"left", marginRight:"3rem"}}>
+        <p> Plus Google</p>
+        </Link>
+    
+        <Link to="/Members" style={{fontSize:"3rem", float:"right"}}>
+        <p>Minus Google</p>
+        </Link>
+        <Route exact path={`${this.props.match.url}/Search`} component={Search} />
         <div style={{ backgroundColor: "lightgray", width: "100%", height: 100, marginLeft: 0, marginRight: 0, marginTop: "50rem" }}></div>
     </Col>
 

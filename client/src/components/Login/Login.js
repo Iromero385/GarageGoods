@@ -34,7 +34,7 @@ class Login extends React.Component{
             <Modal.Title style={{color:"white", fontSize:"3rem"}}>Login</Modal.Title>
           </Modal.Header>
           <Modal.Body className="loginBody" >
-              <LoginForm closeModal={this.handleClose}></LoginForm>
+              <LoginForm userData={this.props.userData} closeModal={this.handleClose}></LoginForm>
             {/* content goes here */}
           </Modal.Body>
           <Modal.Footer>

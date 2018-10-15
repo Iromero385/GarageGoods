@@ -1,5 +1,5 @@
 import React from 'react';
-import {BrowserRouter as Router, Route, Switch} from "react-router-dom";
+import {BrowserRouter as Router, Route} from "react-router-dom";
 import Header from "./components/Header";
 import Search from "./components/Search";
 import Wrapper from "./components/Wrapper";
@@ -17,31 +17,26 @@ class App  extends React.Component{
     id:"",
     email:""
   }
-  userdata = () => {
+  userData = () => {
     API.currentUser().then((res) => {
-        if(res.data.id){
-            this.setState({id:res.data.id, email:this.res.data.email})
+        if(res.data){
+          debugger
+          this.setState({id:res.data.id, email:res.data.email})
         }
     }).catch(err => console.log(err))
-}
+  }
   render(){
     return(
-  
-        <Router>
+      <Router>
           <div className="App">
-            <Header />
+            <Header userEmail={this.state.email}/>
             <Wrapper>
-                <Switch>
-                  <Route exact path="/" component={Login} />
+                  <Route exact path="/" render={(props) => <Login {...props} userData={this.userData} />} />
                   <Route exact path="/CreatePost" component={GarageSaleForm} />
                   <Route exact path="/logout" component={Logout} />
-                  <Route exact path="/Members" component={Results} />
                   <Route exact path="/MyPost" component={Results2}/>
-                  <Route path="/Results" component={Results} />
-                  <Route path="/Search" component={Search} />
-                  
-                </Switch>
-  
+                  <Route exact path="/Search" component={Search} />
+                  <Route path="/Members" component={Results} />
             </Wrapper >
           </div >
         </Router>
