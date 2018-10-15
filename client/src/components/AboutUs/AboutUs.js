@@ -20,13 +20,11 @@ class AboutUs extends React.Component {
           <Collapse in={this.state.open} >
             <div>
               <Well style={{ backgroundColor: "transparent", color: "white", fontSize: "2rem" }}>
-                <p>About GarageGoods</p>
+              <p>About GarageGoods</p>
                 <p>We collect, review and deliver the best information --- so you don’t have too.</p>
-                <p>GarageGoods was co-founded in 2018 by Isaac Romero and Amico Kaur (students at UC Extentions as Full stack Developers) instructed by David Hallinan ().</p>
+                <p>GarageGoods was co-founded in 2018 by Isaac Romero and Amico Kaur (students at UC Extentions as Full stack Developers) instructed by David Hallinan (Raddest instructor alive).</p>
                 <p>What We Do At GarageGoods</p>
-                <p> we collect, review, and deliver the best information in the market, so you don’t have to. Our data collects the present and future garage sales and can be searched by categories, city and zip code. You can also create, check your post and review your incoming garage sales.
-                </p>
-    
+                <p> we collect, review, and deliver the best information in the market, so you don’t have to. Our data collects the present and future garage sales and can be searched by categories, city and zip code. You can also create, check your post and review your incoming garage sales. </p>   
             </Well>
             </div>
           </Collapse>
