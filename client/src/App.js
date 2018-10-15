@@ -34,7 +34,7 @@ class App  extends React.Component{
                   <Route exact path="/" render={(props) => <Login {...props} userData={this.userData} />} />
                   <Route exact path="/CreatePost" component={GarageSaleForm} />
                   <Route exact path="/logout" component={Logout} />
-                  <Route exact path="/MyPost" component={Results2}/>
+                  <Route path="/MyPost" component={Results2}/>
                   <Route exact path="/Search" component={Search} />
                   <Route path="/Members" component={Results} />
             </Wrapper >

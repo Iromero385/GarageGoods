@@ -3,8 +3,8 @@ import {Row, Col} from "react-bootstrap"
 import logo from  "./backgroundmain3.jpg"
 import "./Search.css"
 import React from "react"; 
-import SimpleMap from "./../Google"
-import Results from "./../Results"
+import SimpleMap from "./../Google2"
+
 
 
 const Search = () => (

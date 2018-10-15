@@ -26,7 +26,7 @@ render() {
         <Table striped responsive bordered style={{backgroundColor:"lightgray", marginTop:"3rem" }}  >
             <thead>
                 <tr style={{backgroundColor:"sandybrown", padding:"1rem",fontSize:"2rem"}}>
-                    <th>#</th>
+                    <th>Post</th>
                     <th>Addres</th>
                     <th>City</th>
                     <th>State</th>

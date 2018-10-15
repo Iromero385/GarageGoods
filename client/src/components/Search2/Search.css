@@ -1,0 +1,12 @@
+#search{
+    margin-bottom: 2rem;
+    
+}
+
+.backgroundPhoto {
+    background: black;
+    z-index: -1;
+    width: 400px;
+    height: 400px;
+
+}
