@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import GoogleMapReact from 'google-map-react';
 import Geocode from "react-geocode";
  import API from "./../../utils/API";
- Geocode.setApiKey("AIzaSyCNN1MQcj2eitSI51Tve4SBZlchmiaadoo");
+
  
 const AnyReactComponent = ({ text }) => (
   <div style={{

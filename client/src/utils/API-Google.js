@@ -1,6 +1,6 @@
 import Geocode from "react-geocode";
 import API from "./API";
-Geocode.setApiKey("AIzaSyCNN1MQcj2eitSI51Tve4SBZlchmiaadoo");
+
 
 const GarageLocations = {
     locations:[],
