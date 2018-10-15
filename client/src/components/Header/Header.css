@@ -8,6 +8,20 @@
 font-size: 3rem;
 
 }
+#navbar a p{
+    color:white;
+font-size: 2rem;
+
+}
+#navbar a:active{
+    color:black;
+font-size: 3rem;
+
+}
+
+
+
+
 /* .MenuItem{
     color:black !important;
 } */

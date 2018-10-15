@@ -30,9 +30,9 @@ render(){
           Members
         </NavItem>
         <NavDropdown eventKey={3} title="My Account" id="basic-nav-dropdown">
-          <MenuItem eventKey={3.1}> <p style={{ color: "black" }}>My Post</p></MenuItem>
-          <MenuItem eventKey={3.2}><p style={{ color: "black" }}>Create Post</p></MenuItem>
-          <MenuItem eventKey={3.3}><p style={{ color: "black" }}>Something Here</p></MenuItem>
+          <MenuItem eventKey={3.1} href="/MyPost"> <p  style={{ color: "black" }}>My Post</p></MenuItem>
+          <MenuItem eventKey={3.2} href="/CreatePost"><p style={{ color: "black" }}>Create Post</p></MenuItem>
+          {/* <MenuItem eventKey={3.3}><p style={{ color: "black" }}>Something Here</p></MenuItem> */}
           <MenuItem divider />
           <MenuItem eventKey={3.4}><p style={{ color: "black" }}onClick={this.logoutPlease}>Logout</p></MenuItem>
         </NavDropdown>

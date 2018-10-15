@@ -2,18 +2,32 @@ import React from "react";
 import { Table, Col } from "react-bootstrap";
 import TableRow from "./../TableRow"
 import API from "./../../utils/API"
-import "./Results.css"
+import "./Results2.css"
 
 
-class Results extends React.Component {
+class Results2 extends React.Component {
     state={
-        results:[]
+        results:[],
+        currentUserId:""
     }
     componentDidMount() {
-        this.listings();
+        this.userdata();
+    }
+    userdata = () => {
+        API.currentUser().then((res) => {
+            if(res.data.id){
+                this.setState({currentUserId:res.data.id})
+                this.listingsforUser()
+            }
+        }).catch(err => console.log(err))
     }
     listings = () => {
         API.findAll().then(res => {
+            this.setState({results:res.data})
+        }).catch(err => console.log(err))
+    }
+    listingsforUser = (id) => {
+        API.findAllByUser(this.state.currentUserId).then(res => {
             this.setState({results:res.data})
         }).catch(err => console.log(err))
     }
@@ -21,6 +35,7 @@ render() {
     return (
 
     <Col md={12}>
+       
         <Table striped responsive bordered style={{backgroundColor:"lightgray", marginTop:"3rem" }}  >
             <thead>
                 <tr style={{backgroundColor:"sandybrown", padding:"1rem",fontSize:"2rem"}}>
@@ -57,4 +72,4 @@ render() {
         };
     }
 
-    export default Results; 
+    export default Results2; 

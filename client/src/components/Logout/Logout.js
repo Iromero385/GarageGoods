@@ -4,9 +4,12 @@ import {Col, Row, Jumbotron  } from "react-bootstrap";
 const Logout = () => (
 
     <Row >
-    <Col md={12} xs={10} className="aboutUsBackground" >
+    <Col md={6} xs={10} mdOffset={3} className="aboutUsBackground" >
     
-      <Jumbotron style={{fontSize:'3rem'}}>Come Back soon!! :) we will miss you!</Jumbotron>
+      <Jumbotron style={{fontSize:'3rem', backgroundColor:"sandybrown",marginTop:"30rem", padding:0}}>
+      <p style={{fontSize:"4rem"}}>Come Back Soon ! :) </p>
+      <p>We miss you! </p>
+      </Jumbotron>
      
     </Col>
     </Row>

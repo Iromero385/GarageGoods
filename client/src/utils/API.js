@@ -15,5 +15,11 @@ export default {
     },
     currentUser:function(){
         return axios.get("/api/user_data")
+    },
+    findAllByUser:function(id){
+        return axios.get("/api/GarageGoods/AllListings/"+ id)
+    },
+    create:function(garageSale){
+        return axios.post("/api/GarageGoods/create", garageSale)
     }
 };
