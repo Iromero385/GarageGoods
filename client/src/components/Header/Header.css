@@ -13,7 +13,7 @@ font-size: 3rem;
 font-size: 2rem;
 
 }
-#navbar a:active{
+#navbar a:focus{
     color:black;
 font-size: 3rem;
 

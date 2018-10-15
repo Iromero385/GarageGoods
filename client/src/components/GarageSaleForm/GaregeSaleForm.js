@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import {Col, Row} from "react-bootstrap"
+import API from "./../../utils/API"
 import "./Form.css";
 
 
@@ -10,8 +11,22 @@ class GarageSaleForm extends Component {
     state: "",
     city: "",
     date:"",
-    zipcode:""
+    zipcode:"",
+    currentUserId:""
   };
+  componentDidMount() {
+    this.userdata();
+}
+userdata = () => {
+    API.currentUser().then((res) => {
+        if(res.data.id){
+            this.setState({currentUserId:res.data.id})
+        }
+        else{
+          this.setState({currentUserId:10})
+        }
+    }).catch(err => console.log(err))
+}
 
   handleInputChange = event => {
     // Getting the value and name of the input which triggered the change
@@ -23,19 +38,32 @@ class GarageSaleForm extends Component {
     });
   };
   handleFormSubmit = event => {
-    this.setState({
-      address: "",
-      state: "",
-      city: "",
-      date:"",
-      zipcode:""
-    });
+    event.preventDefault();
+    debugger
+    API.create({
+      address: this.state.address,
+      state: this.state.state,
+      city: this.state.city,
+      date:this.state.date,
+      zipcode:this.state.zipcode,
+      UserId:this.state.currentUserId
+    }).then( res =>{
+      this.setState({
+        address: "",
+        state: "",
+        city: "",
+        date:"",
+        zipcode:""
+      });
+      window.location.assign("/MyPost")
+
+    }).catch(err => console.log(err))
   };
   render() {
     // Notice how each input has a `value`, `name`, and `onChange` prop
     return (
       <Row>
-        <Col md={12} >
+        <Col md={6} mdOffset={3} >
         <form className="form" style={{marginTop:"3rem", backgroundColor:""}}>
           <label style={{paddingTop:10, color: "#ffffff"  , fontSize: 25}}> Address </label>
           <input

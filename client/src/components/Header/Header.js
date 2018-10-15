@@ -6,12 +6,18 @@ import "./Header.css"
 
 
 class Header extends React.Component {
-  logoutPlease = () =>{
-    API.logout().then((res) => {
-      window.location.assign(res.data)
-    })
-    .catch(err => console.log(err))
+  state={
+    email:""
   }
+ 
+userdata = () => {
+    API.currentUser().then((res) => {
+      console.log(res.data)
+        if(res.data){
+            this.setState({email:res.data.email})
+        }
+    }).catch(err => console.log(err))
+}
 render(){
 
     return(
@@ -19,7 +25,7 @@ render(){
     <Navbar id="navbar" fixedTop fluid>
       <Navbar.Header >
         <Navbar.Brand>
-          <Link to="/home" >Garage Goods</Link>
+          <Link to="/home" >Garage Goods: {this.state.email}</Link>
         </Navbar.Brand>
       </Navbar.Header>
       <Nav pullRight>

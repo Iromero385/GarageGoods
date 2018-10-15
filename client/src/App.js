@@ -1,6 +1,5 @@
 import React from 'react';
 import {BrowserRouter as Router, Route, Switch} from "react-router-dom";
-import AboutUs from "./components/AboutUs";
 import Header from "./components/Header";
 import Search from "./components/Search";
 import Wrapper from "./components/Wrapper";
@@ -11,8 +10,6 @@ import Logout from "./components/Logout";
 import API from "./utils/API"
 import GarageSaleForm from "./components/GarageSaleForm"
 import './App.css';
-
-
 
 
 class App  extends React.Component{ 
@@ -41,6 +38,8 @@ class App  extends React.Component{
                   <Route exact path="/Members" component={Results} />
                   <Route exact path="/MyPost" component={Results2}/>
                   <Route path="/Results" component={Results} />
+                  <Route path="/Search" component={Search} />
+                  
                 </Switch>
   
             </Wrapper >
